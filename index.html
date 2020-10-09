@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="./js/main.js"></script>
+</head>
+<body style="background-image: url(./images/radar.jpg);">
+    <div class="flex-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <form>
+                        <h1>Radar de AutoEstradas</h1>
+                        <label>Velocidade:</label>
+                        <input type="number" id="velocidadeAutoEstradas"><br><br>
+                        <input type="button" value="Descobrir" onclick="autoEstradas(document.getElementById('velocidadeAutoEstradas').value)">
+                    </form><br>
+                    <p id="mostrarAutoEstradas"></p>
+                </div>
+
+                <div class="col-sm">
+                    <form>
+                        <h1>Radar de fora das localidades</h1>
+                        <label>Velocidade:</label>
+                        <input type="number" id="velocidadeForaLocalidades"><br><br>
+                        <input type="button" value="Descobrir" onclick="foraLocalidades(document.getElementById('velocidadeForaLocalidades').value)">
+                    </form><br>
+                    <p id="mostrarForaLocalidades"></p>
+                </div>
+            
+                <div class="col-sm">
+                    <form>
+                        <h1>Radar de dentro das localidades</h1>
+                        <label>Velocidade:</label>
+                        <input type="number" id="velocidadeDentroLocalidades"><br><br>
+                        <input type="button" value="Descobrir" onclick="dentroLocalidades(document.getElementById('velocidadeDentroLocalidades').value)">
+                    </form><br>
+                    <p id="mostrarDentroLocalidades" class="alert"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
