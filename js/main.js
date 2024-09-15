@@ -34,7 +34,7 @@ function autoEstradas(velocidade){
 }
 
 function foraLocalidades(velocidade){
-    let mostrarForaLocalidades = document.getElementById('mostrarAutoEstradas');
+    let mostrarForaLocalidades = document.getElementById('mostrarForaLocalidades');
     if(velocidade <= 90){
         mostrarForaLocalidades.setAttribute("class", "alert alert-success");
         mostrarForaLocalidades.innerHTML = "Dentro do limite";
