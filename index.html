@@ -1,48 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radar</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="./js/main.js"></script>
-</head>
-<body style="background-image: url(./images/radar.jpg);">
-    <div class="flex-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <form>
-                        <h1>Radar de AutoEstradas</h1>
-                        <label>Velocidade:</label>
-                        <input type="number" id="velocidadeAutoEstradas"><br><br>
-                        <input type="button" value="Descobrir" onclick="autoEstradas(document.getElementById('velocidadeAutoEstradas').value)">
-                    </form><br>
-                    <p id="mostrarAutoEstradas" class="alert"></p>
-                </div>
 
-                <div class="col-sm">
-                    <form>
-                        <h1>Radar de fora das localidades</h1>
-                        <label>Velocidade:</label>
-                        <input type="number" id="velocidadeForaLocalidades"><br><br>
-                        <input type="button" value="Descobrir" onclick="foraLocalidades(document.getElementById('velocidadeForaLocalidades').value)">
-                    </form><br>
-                    <p id="mostrarForaLocalidades" class="alert"></p>
-                </div>
-            
-                <div class="col-sm">
-                    <form>
-                        <h1>Radar de dentro das localidades</h1>
-                        <label>Velocidade:</label>
-                        <input type="number" id="velocidadeDentroLocalidades"><br><br>
-                        <input type="button" value="Descobrir" onclick="dentroLocalidades(document.getElementById('velocidadeDentroLocalidades').value)">
-                    </form><br>
-                    <p id="mostrarDentroLocalidades" class="alert"></p>
-                </div>
+    <title>Radar</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+    <main class="app">
+        <div class="container py-5">
+            <h1 class="text-center mb-5">Sistema de Radar</h1>
+
+            <div class="row g-4">
+                <!-- Autoestradas -->
+                <section class="col-lg-4 col-md-6">
+                    <div class="card-radar">
+                        <h2>Autoestradas</h2>
+
+                        <label for="autoestradaInput">
+                            Velocidade
+                        </label>
+
+                        <input type="number" id="autoestradaInput" class="form-control" placeholder="Digite a velocidade">
+
+                        <button type="button" class="btn btn-primary mt-3" id="autoestradaBtn">
+                            Descobrir
+                        </button>
+
+                        <p id="autoestradaResultado" class="mt-3"></p>
+                    </div>
+                </section>
+
+                <!-- Fora das Localidades -->
+                <section class="col-lg-4 col-md-6">
+                    <div class="card-radar">
+                        <h2>Fora das Localidades</h2>
+
+                        <label for="foraLocalidadesInput">
+                            Velocidade
+                        </label>
+
+                        <input type="number" id="foraLocalidadesInput" class="form-control" placeholder="Digite a velocidade">
+
+                        <button type="button" class="btn btn-primary mt-3" id="foraLocalidadesBtn">
+                            Descobrir
+                        </button>
+
+                        <p id="foraLocalidadesResultado" class="mt-3"></p>
+                    </div>
+                </section>
+
+                <!-- Dentro das Localidades -->
+                <section class="col-lg-4 col-md-6">
+                    <div class="card-radar">
+                        <h2>Dentro das Localidades</h2>
+
+                        <label for="dentroLocalidadesInput">
+                            Velocidade
+                        </label>
+
+                        <input type="number" id="dentroLocalidadesInput" class="form-control" placeholder="Digite a velocidade">
+
+                        <button type="button" class="btn btn-primary mt-3" id="dentroLocalidadesBtn">
+                            Descobrir
+                        </button>
+
+                        <p id="dentroLocalidadesResultado" class="mt-3"></p>
+                    </div>
+                </section>
             </div>
         </div>
-    </div>
+    </main>
 </body>
+
 </html>
